@@ -1,0 +1,28 @@
+数据样例
+  点击：
+  https://tracking.yrahmobi.com/click.php?e=102&adx=admixer&campaign=263524
+  &ad=331569&imp_id=adxi_20171206165323916993012467&app=default&price=0.72&platform=1
+  
+e：事件类型 区分展现点击（自定义）
+    e = 101  展现
+    e = 102  点击
+    e = 103  转化（待用）
+user_id : 账户id
+adx：adx名字
+campaign ：投放计划id  
+ad：广告id
+imp_id:展现id 
+app：媒体  （暂无，可用default）
+price：单价
+platform ：平台  
+    1、ios 
+    2、android            
+date：日期（1991-01-01）
+timestamp ：时间戳
+
+kafka数据
+  例：
+  topic:click_log   (点击日志)
+date=1900-01-01 timestamp=1591071219000 e=102 adx=admixer user_id=12318 imp_id=adxi_20171206165323916993012467 ad_id=331569 price=0.34 campaign=263524 platform=1 
+  topic:imp_log   (展现日志)
+date=1900-01-01 timestamp=1591071339000 e=101 adx=admixer user_id=15278 imp_id=adxi_20173421235533916993012467 ad_id=331569 price=0.17 campaign=134554 platform=2 
